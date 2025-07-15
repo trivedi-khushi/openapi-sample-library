@@ -1,0 +1,12 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI Sample Library
+  description: Curated real-world API examples
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+paths:
+  # API paths will go here
+components:
+  schemas:
+    # Common schemas here
