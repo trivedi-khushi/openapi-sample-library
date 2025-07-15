@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.0.0
 info:
   title: OpenAPI Sample Library
   description: Curated real-world API examples
@@ -6,7 +6,25 @@ info:
 servers:
   - url: https://api.example.com/v1
 paths:
-  # API paths will go here
+  /github:
+    $ref: './apis/github/github-api.yaml'
+  /stripe:
+    $ref: './apis/stripe/stripe-api.yaml'
+  /jira:
+    $ref: './apis/jira/jira-api.yaml'
+  /notion:
+    $ref: './apis/notion/notion-api.yaml'
+  /slack:
+    $ref: './apis/slack/slack-api.yaml'
 components:
   schemas:
-    # Common schemas here
+    GitHubUser:
+      $ref: './schemas/github/user-schema.yaml'
+    StripePayment:
+      $ref: './schemas/stripe/payment-schema.yaml'
+    JiraIssue:
+      $ref: './schemas/jira/issue-schema.yaml'
+    NotionPage:
+      $ref: './schemas/notion/page-schema.yaml'
+    SlackMessage:
+      $ref: './schemas/slack/message-schema.yaml'
