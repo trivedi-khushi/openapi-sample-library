@@ -1,0 +1,35 @@
+---
+title: Ranked list of Ntoion APIs 
+description: to be used in this project, and used in case this needs to be expanded more in future scopes.
+---
+
+# 🎯 Primary Curated Notion API Endpoint Set (7 endpoints)
+
+| # | Method | Endpoint                        | Brief Description                                | Type   | Difficulty | Importance | Why Pick?                                   |
+| - | ------ | ------------------------------- | ------------------------------------------------ | ------ | ---------- | ---------- | ------------------------------------------- |
+| 1 | POST   | /v1/databases/query             | Query database with filters, sorting, pagination | Read   | Medium     | High       | Core data retrieval for apps                |
+| 2 | GET    | /v1/databases/{database\_id}    | Retrieve database metadata                       | Read   | Low        | High       | Metadata needed for schema and UI           |
+| 3 | POST   | /v1/pages                       | Create a page inside database/workspace          | Create | Medium     | High       | Content creation is key                     |
+| 4 | GET    | /v1/pages/{page\_id}            | Retrieve a page and its properties               | Read   | Low        | High       | Basic retrieval API                         |
+| 5 | GET    | /v1/blocks/{block\_id}          | Retrieve block content                           | Read   | Low        | High       | Building blocks is fundamental              |
+| 6 | PATCH  | /v1/blocks/{block\_id}/children | Append children blocks to a block                | Create | Medium     | High       | Common for dynamic content                  |
+| 7 | POST   | /v1/search                      | Search pages, databases, and workspaces          | Read   | Medium     | High       | Important for full-text and filtered search |
+
+---
+
+# 🔄 Secondary / Replacement Candidate Endpoints (ranked)
+
+| Rank | Method | Endpoint                        | Brief Description                             | Type   | Difficulty | Importance | Reason to Consider Replacement            |
+| ---- | ------ | ------------------------------- | --------------------------------------------- | ------ | ---------- | ---------- | ----------------------------------------- |
+| 1    | GET    | /v1/users/me                    | Retrieve current authorized user info         | Read   | Low        | High       | Personalization and authorization context |
+| 2    | GET    | /v1/users                       | List users                                    | Read   | Low        | Medium     | User management                           |
+| 3    | PATCH  | /v1/pages/{page\_id}            | Update page properties                        | Update | Medium     | Medium     | Content editing                           |
+| 4    | GET    | /v1/blocks/{block\_id}/children | Retrieve children blocks                      | Read   | Medium     | Medium     | Navigation of content structure           |
+| 5    | PATCH  | /v1/blocks/{block\_id}          | Update block content                          | Update | Medium     | Medium     | Modify content blocks                     |
+| 6    | DELETE | /v1/blocks/{block\_id}          | Delete a block                                | Delete | Medium     | Medium     | Content removal                           |
+| 7    | POST   | /v1/blocks/{block\_id}/children | Append children blocks (alternative to PATCH) | Create | Medium     | Medium     | More granular content building            |
+| 8    | GET    | /v1/search                      | Search with filters (advanced)                | Read   | Medium     | Medium     | Alternative search approaches             |
+| 9    | GET    | /v1/databases                   | List all databases accessible                 | Read   | Low        | Medium     | Metadata discovery                        |
+| 10   | POST   | /v1/databases                   | Create a new database                         | Create | High       | Medium     | Advanced content structure creation       |
+
+---
