@@ -1,0 +1,91 @@
+---
+title: Table for all GitHub APIs
+---
+
+# Slack Web API Endpoint Catalog (2025)
+
+Official docs: [https://api.slack.com/methods](https://api.slack.com/methods)
+
+---
+
+### 1. Conversations
+
+| Method | Endpoint              | Description                                  | Type   | Difficulty | Importance | Docs Link                                                                                                  |
+| ------ | --------------------- | -------------------------------------------- | ------ | ---------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
+| POST   | conversations.list    | List all channels/conversations              | Read   | Medium     | High       | [https://api.slack.com/methods/conversations.list](https://api.slack.com/methods/conversations.list)       |
+| POST   | conversations.history | Retrieve messages from a channel             | Read   | Medium     | High       | [https://api.slack.com/methods/conversations.history](https://api.slack.com/methods/conversations.history) |
+| POST   | conversations.info    | Get information about a conversation/channel | Read   | Low        | High       | [https://api.slack.com/methods/conversations.info](https://api.slack.com/methods/conversations.info)       |
+| POST   | conversations.join    | Join a conversation                          | Update | Medium     | Medium     | [https://api.slack.com/methods/conversations.join](https://api.slack.com/methods/conversations.join)       |
+| POST   | conversations.leave   | Leave a conversation                         | Update | Medium     | Medium     | [https://api.slack.com/methods/conversations.leave](https://api.slack.com/methods/conversations.leave)     |
+
+---
+
+### 2. Chat
+
+| Method | Endpoint         | Description                         | Type   | Difficulty | Importance | Docs Link                                                                                        |
+| ------ | ---------------- | ----------------------------------- | ------ | ---------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| POST   | chat.postMessage | Send a message to a channel or user | Create | Medium     | High       | [https://api.slack.com/methods/chat.postMessage](https://api.slack.com/methods/chat.postMessage) |
+| POST   | chat.update      | Update a message                    | Update | Medium     | Medium     | [https://api.slack.com/methods/chat.update](https://api.slack.com/methods/chat.update)           |
+| POST   | chat.delete      | Delete a message                    | Delete | Medium     | Medium     | [https://api.slack.com/methods/chat.delete](https://api.slack.com/methods/chat.delete)           |
+
+---
+
+### 3. Users
+
+| Method | Endpoint          | Description                     | Type   | Difficulty | Importance | Docs Link                                                                                          |
+| ------ | ----------------- | ------------------------------- | ------ | ---------- | ---------- | -------------------------------------------------------------------------------------------------- |
+| GET    | users.list        | List all users in the workspace | Read   | Low        | High       | [https://api.slack.com/methods/users.list](https://api.slack.com/methods/users.list)               |
+| GET    | users.info        | Get info about a user           | Read   | Low        | High       | [https://api.slack.com/methods/users.info](https://api.slack.com/methods/users.info)               |
+| POST   | users.setPresence | Set user presence               | Update | Medium     | Medium     | [https://api.slack.com/methods/users.setPresence](https://api.slack.com/methods/users.setPresence) |
+
+---
+
+### 4. Files
+
+| Method | Endpoint     | Description            | Type   | Difficulty | Importance | Docs Link                                                                                |
+| ------ | ------------ | ---------------------- | ------ | ---------- | ---------- | ---------------------------------------------------------------------------------------- |
+| POST   | files.upload | Upload a file to Slack | Create | Medium     | High       | [https://api.slack.com/methods/files.upload](https://api.slack.com/methods/files.upload) |
+| POST   | files.list   | List files             | Read   | Medium     | Medium     | [https://api.slack.com/methods/files.list](https://api.slack.com/methods/files.list)     |
+| POST   | files.delete | Delete a file          | Delete | Medium     | Medium     | [https://api.slack.com/methods/files.delete](https://api.slack.com/methods/files.delete) |
+
+---
+
+### 5. Reactions
+
+| Method | Endpoint         | Description                         | Type   | Difficulty | Importance | Docs Link                                                                                        |
+| ------ | ---------------- | ----------------------------------- | ------ | ---------- | ---------- | ------------------------------------------------------------------------------------------------ |
+| POST   | reactions.add    | Add a reaction (emoji) to a message | Create | Low        | Medium     | [https://api.slack.com/methods/reactions.add](https://api.slack.com/methods/reactions.add)       |
+| POST   | reactions.remove | Remove a reaction from a message    | Delete | Low        | Medium     | [https://api.slack.com/methods/reactions.remove](https://api.slack.com/methods/reactions.remove) |
+| GET    | reactions.get    | Get reactions for a message         | Read   | Low        | Medium     | [https://api.slack.com/methods/reactions.get](https://api.slack.com/methods/reactions.get)       |
+
+---
+
+### 6. Channels (Legacy, use Conversations API instead)
+
+| Method | Endpoint      | Description          | Type | Difficulty | Importance | Docs Link                                                                                  |
+| ------ | ------------- | -------------------- | ---- | ---------- | ---------- | ------------------------------------------------------------------------------------------ |
+| POST   | channels.list | List public channels | Read | Low        | Medium     | [https://api.slack.com/methods/channels.list](https://api.slack.com/methods/channels.list) |
+| POST   | channels.info | Get channel info     | Read | Low        | Medium     | [https://api.slack.com/methods/channels.info](https://api.slack.com/methods/channels.info) |
+
+---
+
+### 7. OAuth & Authentication
+
+| Method | Endpoint     | Description                              | Type   | Difficulty | Importance | Docs Link                                                                                |
+| ------ | ------------ | ---------------------------------------- | ------ | ---------- | ---------- | ---------------------------------------------------------------------------------------- |
+| POST   | oauth.access | Exchange temporary code for access token | Create | High       | High       | [https://api.slack.com/methods/oauth.access](https://api.slack.com/methods/oauth.access) |
+
+---
+
+# Summary
+
+| API Group     | Use Cases                            | Difficulty Range | Popularity/Importance |
+| ------------- | ------------------------------------ | ---------------- | --------------------- |
+| Conversations | Channel listing, history, join       | Low–Medium       | High                  |
+| Chat          | Sending, updating, deleting messages | Medium           | High                  |
+| Users         | Listing and info retrieval           | Low              | High                  |
+| Files         | Uploading, listing, deleting         | Medium           | Medium                |
+| Reactions     | Adding/removing emoji reactions      | Low              | Medium                |
+| OAuth         | Authentication & token exchange      | High             | High                  |
+
+---
