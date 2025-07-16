@@ -5,17 +5,6 @@ info:
   version: 1.0.0
 servers:
   - url: https://api.example.com/v1
-paths:
-  /github:
-    $ref: './apis/github/github-api.yaml'
-  /stripe:
-    $ref: './apis/stripe/stripe-api.yaml'
-  /jira:
-    $ref: './apis/jira/jira-api.yaml'
-  /notion:
-    $ref: './apis/notion/notion-api.yaml'
-  /slack:
-    $ref: './apis/slack/slack-api.yaml'
 components:
   schemas:
     GitHubUser:
@@ -28,3 +17,14 @@ components:
       $ref: './schemas/notion/page-schema.yaml'
     SlackMessage:
       $ref: './schemas/slack/message-schema.yaml'
+paths:
+  /github:
+    $ref: './apis/github/paths.yaml'
+  /stripe:
+    $ref: './apis/stripe/paths.yaml'
+  /jira:
+    $ref: './apis/jira/paths.yaml'
+  /notion:
+    $ref: './apis/notion/paths.yaml'
+  /slack:
+    $ref: './apis/slack/paths.yaml'
