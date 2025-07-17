@@ -1,0 +1,6 @@
+name: owner
+in: path
+required: true
+description: GitHub repository owner (organization or username)
+schema:
+  type: string

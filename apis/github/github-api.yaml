@@ -8,7 +8,7 @@
     parameters:
       - $ref: '../../components/github/parameters/owner.yaml'
       - $ref: '../../components/github/parameters/repo.yaml'
-      - $ref: '../../components/github/parameters/issue_number.yaml'
+      - $ref: '../../components/github/parameters/index.yaml'
     requestBody:
       required: true
       content:
@@ -24,10 +24,10 @@
         content:
           application/json:
             schema:
-              $ref: '../../components/github/schemas/issue-response.yaml'
+              $ref: '../../components/github/schemas/index.yaml'
             examples:
               success-response:
-                $ref: '../../examples/github/update-issue-success.yaml'
+                $ref: '../../examples/github/example_github.yaml'
       '404':
         description: Issue not found
         content:
