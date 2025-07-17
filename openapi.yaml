@@ -8,7 +8,7 @@ servers:
 components:
   schemas:
     GitHubUser:
-      $ref: './schemas/github/user-schema.yaml'
+      $ref: './components\github\schema\issue-update-request.yaml'
     StripePayment:
       $ref: './schemas/stripe/payment-schema.yaml'
     JiraIssue:

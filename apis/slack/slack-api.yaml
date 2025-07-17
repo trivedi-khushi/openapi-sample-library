@@ -1,0 +1,42 @@
+/repos/{owner}/{repo}/issues/{issue_number}:
+  patch:
+    summary: Update an issue
+    description: Update an existing GitHub issue. Only users with push access can modify issues.
+    operationId: updateIssue
+    tags:
+      - Issues
+    parameters:
+      - $ref: '../../components/github/parameters/owner.yaml'
+      - $ref: '../../components/github/parameters/repo.yaml'
+      - $ref: '../../components/github/parameters/issue_number.yaml'
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/github/schemas/issue-update-request.yaml'
+          examples:
+            update-issue:
+              $ref: '../../examples/github/update-issue-request.yaml'
+    responses:
+      '200':
+        description: Successful issue update
+        content:
+          application/json:
+            schema:
+              $ref: '../../components/github/schemas/issue-response.yaml'
+            examples:
+              success-response:
+                $ref: '../../examples/github/update-issue-success.yaml'
+      '404':
+        description: Issue not found
+        content:
+          application/json:
+            schema:
+              $ref: '../../components/github/schemas/error.yaml'
+      '422':
+        description: Validation failed
+        content:
+          application/json:
+            schema:
+              $ref: '../../components/github/schemas/error.yaml'

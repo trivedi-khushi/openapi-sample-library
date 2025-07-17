@@ -1,10 +1,8 @@
-
 /repos/{owner}/{repo}/issues/{issue_number}:
   patch:
-    summary: "Update an issue"
-    description: >
-      Update an existing issue. Issue owners and users with push access (or triage role) can edit an issue.
-    operationId: "updateIssue"
+    summary: Update an issue
+    description: Update an existing GitHub issue. Only users with push access can modify issues.
+    operationId: updateIssue
     tags:
       - Issues
     parameters:
@@ -12,7 +10,6 @@
       - $ref: '../../components/github/parameters/repo.yaml'
       - $ref: '../../components/github/parameters/issue_number.yaml'
     requestBody:
-      description: Fields to update in the issue.
       required: true
       content:
         application/json:
