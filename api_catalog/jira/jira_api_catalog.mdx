@@ -1,0 +1,156 @@
+---
+title: Table for all Jira APIs
+---
+# Jira REST API v3 Endpoint Catalog (as of 2025)
+
+Official docs:
+[https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/)
+
+---
+
+### 1. Issue APIs
+
+| Method | Endpoint                                      | Brief Description              | Type   | Difficulty | Importance |
+| ------ | --------------------------------------------- | ------------------------------ | ------ | ---------- | ---------- |
+| GET    | /rest/api/3/issue/{issueIdOrKey}              | Get issue details by ID or key | Read   | Low        | High       |
+| POST   | /rest/api/3/issue                             | Create an issue                | Create | Medium     | High       |
+| PUT    | /rest/api/3/issue/{issueIdOrKey}              | Update an issue                | Update | Medium     | High       |
+| DELETE | /rest/api/3/issue/{issueIdOrKey}              | Delete an issue                | Delete | Medium     | Medium     |
+| GET    | /rest/api/3/issue/{issueIdOrKey}/comments     | List comments on an issue      | Read   | Low        | High       |
+| POST   | /rest/api/3/issue/{issueIdOrKey}/comment      | Add comment to an issue        | Create | Medium     | High       |
+| PUT    | /rest/api/3/issue/{issueIdOrKey}/comment/{id} | Update a comment               | Update | Medium     | Medium     |
+| DELETE | /rest/api/3/issue/{issueIdOrKey}/comment/{id} | Delete a comment               | Delete | Medium     | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/)
+
+---
+
+### 2. Project APIs
+
+| Method | Endpoint                             | Brief Description             | Type   | Difficulty | Importance |
+| ------ | ------------------------------------ | ----------------------------- | ------ | ---------- | ---------- |
+| GET    | /rest/api/3/project                  | Get all projects              | Read   | Low        | High       |
+| GET    | /rest/api/3/project/{projectIdOrKey} | Get project by ID or key      | Read   | Low        | High       |
+| POST   | /rest/api/3/project                  | Create a project (admin only) | Create | High       | Medium     |
+| PUT    | /rest/api/3/project/{projectIdOrKey} | Update project                | Update | High       | Medium     |
+| DELETE | /rest/api/3/project/{projectIdOrKey} | Delete project                | Delete | High       | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-projects/)
+
+---
+
+### 3. Search APIs
+
+| Method | Endpoint           | Brief Description                    | Type | Difficulty | Importance |
+| ------ | ------------------ | ------------------------------------ | ---- | ---------- | ---------- |
+| POST   | /rest/api/3/search | Search for issues using JQL          | Read | Medium     | High       |
+| GET    | /rest/api/3/search | Search issues (deprecated, use POST) | Read | Medium     | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-search/)
+
+---
+
+### 4. User APIs
+
+| Method | Endpoint                | Brief Description                  | Type | Difficulty | Importance |
+| ------ | ----------------------- | ---------------------------------- | ---- | ---------- | ---------- |
+| GET    | /rest/api/3/user/search | Search users                       | Read | Low        | High       |
+| GET    | /rest/api/3/myself      | Get details about the current user | Read | Low        | High       |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-users/)
+
+---
+
+### 5. Issue Types APIs
+
+| Method | Endpoint                   | Brief Description    | Type | Difficulty | Importance |
+| ------ | -------------------------- | -------------------- | ---- | ---------- | ---------- |
+| GET    | /rest/api/3/issuetype      | Get all issue types  | Read | Low        | Medium     |
+| GET    | /rest/api/3/issuetype/{id} | Get issue type by ID | Read | Low        | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issuetypes/)
+
+---
+
+### 6. Workflow APIs
+
+| Method | Endpoint             | Brief Description | Type | Difficulty | Importance |
+| ------ | -------------------- | ----------------- | ---- | ---------- | ---------- |
+| GET    | /rest/api/3/workflow | Get workflows     | Read | Medium     | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflows/)
+
+---
+
+### 7. Versions APIs
+
+| Method | Endpoint                 | Brief Description | Type   | Difficulty | Importance |
+| ------ | ------------------------ | ----------------- | ------ | ---------- | ---------- |
+| GET    | /rest/api/3/version      | Get versions      | Read   | Low        | Medium     |
+| POST   | /rest/api/3/version      | Create version    | Create | Medium     | Medium     |
+| PUT    | /rest/api/3/version/{id} | Update version    | Update | Medium     | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-versions/)
+
+---
+
+### 8. Components APIs
+
+| Method | Endpoint                   | Brief Description | Type   | Difficulty | Importance |
+| ------ | -------------------------- | ----------------- | ------ | ---------- | ---------- |
+| GET    | /rest/api/3/component      | Get components    | Read   | Low        | Medium     |
+| POST   | /rest/api/3/component      | Create component  | Create | Medium     | Medium     |
+| PUT    | /rest/api/3/component/{id} | Update component  | Update | Medium     | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-components/)
+
+---
+
+### 9. Transitions APIs
+
+| Method | Endpoint                                     | Brief Description                | Type   | Difficulty | Importance |
+| ------ | -------------------------------------------- | -------------------------------- | ------ | ---------- | ---------- |
+| GET    | /rest/api/3/issue/{issueIdOrKey}/transitions | List available issue transitions | Read   | Medium     | High       |
+| POST   | /rest/api/3/issue/{issueIdOrKey}/transitions | Perform a transition on an issue | Update | Medium     | High       |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-transitions/)
+
+---
+
+### 10. Attachments APIs
+
+| Method | Endpoint                                     | Brief Description       | Type   | Difficulty | Importance |
+| ------ | -------------------------------------------- | ----------------------- | ------ | ---------- | ---------- |
+| POST   | /rest/api/3/issue/{issueIdOrKey}/attachments | Add attachment to issue | Create | Medium     | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-attachments/)
+
+---
+
+### 11. Issue Link APIs
+
+| Method | Endpoint                  | Brief Description        | Type | Difficulty | Importance |
+| ------ | ------------------------- | ------------------------ | ---- | ---------- | ---------- |
+| GET    | /rest/api/3/issueLinkType | Get all issue link types | Read | Low        | Medium     |
+
+[Docs](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issuelinktypes/)
+
+---
+
+### Summary
+
+| API Group   | Typical Uses                | Complexity Range | Popularity |
+| ----------- | --------------------------- | ---------------- | ---------- |
+| Issues      | CRUD on issues/comments     | Low–Medium       | High       |
+| Projects    | Manage projects             | Medium–High      | Medium     |
+| Search      | Query issues                | Medium           | High       |
+| Users       | User info and search        | Low              | High       |
+| Issue Types | Metadata about issue types  | Low              | Medium     |
+| Workflows   | Retrieve workflows          | Medium           | Medium     |
+| Versions    | Manage versions             | Low–Medium       | Medium     |
+| Components  | Manage components           | Low–Medium       | Medium     |
+| Transitions | Manage issue status changes | Medium           | High       |
+| Attachments | Add files to issues         | Medium           | Medium     |
+| Issue Links | Metadata for linking issues | Low              | Medium     |
+
+---

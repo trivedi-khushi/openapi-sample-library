@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI Sample Library
+  description: Curated real-world API examples
+  version: 1.0.0
+servers:
+  - url: https://api.github.com
+    description: GitHub API server
+  - url: https://api.atlassian.com
+    description: Jira API server
+  - url: https://api.notion.com
+    description: Notion API server
+  - url: https://slack.com/api
+    description: Slack API server
+  - url: https://api.stripe.com
+    description: Stripe API server
+components:
+  parameters:
+    GitHubUser:
+      $ref: "./components\github\parameters\index.yaml"
+    StripePayment:
+      $ref: "./components/stripe/parameters/index.yaml"
+    JiraIssue:
+      $ref: "./components/jira/parameters/index.yaml"
+    NotionPage:
+      $ref: "./components/notion/parameters/index.yaml"
+    SlackMessage:
+      $ref: "./components/slack/parameters/index.yaml"
+  schemas:
+    GitHubUser:
+      $ref: './components\github\schemas\schema_github.yaml'
+      Error: "./components\github\schemas\error.yaml"
+    StripePayment:
+      $ref: './schemas/stripe/payment-schema.yaml'
+    JiraIssue:
+      $ref: './schemas/jira/issue-schema.yaml'
+    NotionPage:
+      $ref: './schemas/notion/page-schema.yaml'
+    SlackMessage:
+      $ref: './schemas/slack/message-schema.yaml'
+paths:
+  /github:
+    $ref: './apis\github\github-api.yaml'
+  /jira:
+    $ref: './apis\jira\jira-api.yaml'
+  /notion:
+    $ref: './apis\notion\notion-api.yaml'
+  /slack:
+    $ref: './apis\slack\slack-api.yaml'
+  /stripe:
+    $ref: './apis\stripe\stripe-api.yaml'
