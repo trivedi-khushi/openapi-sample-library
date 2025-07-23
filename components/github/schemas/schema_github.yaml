@@ -1,0 +1,17 @@
+type: object
+properties:
+  login:
+    type: string
+    description: The username of the user.
+  id:
+    type: integer
+    description: Unique identifier of the user.
+  node_id:
+    type: string
+    description: The Node ID of the user.
+  avatar_url:
+    type: string
+    format: uri
+    description: URL of the user's avatar image.
+  gravatar_id:
+    type: string

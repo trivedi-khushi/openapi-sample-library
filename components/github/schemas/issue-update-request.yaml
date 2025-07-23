@@ -1,0 +1,19 @@
+type: object
+properties:
+  title:
+    type: string
+  body:
+    type: string
+  assignees:
+    type: array
+    items:
+      type: string
+  state:
+    type: string
+    enum: [open, closed]
+  labels:
+    type: array
+    description: Labels to associate with the issue.
+    items:
+      type: string
+required: [title]

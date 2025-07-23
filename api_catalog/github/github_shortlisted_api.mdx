@@ -21,8 +21,8 @@ description: to be used in this project, and used in case this needs to be expan
 
 | Rank | Method | Endpoint                                     | Brief Description         | Type   | Difficulty | Importance | Reason to Consider Replacement                  |
 | ---- | ------ | -------------------------------------------- | ------------------------- | ------ | ---------- | ---------- | ----------------------------------------------- |
-| 1    | PATCH  | /repos/{owner}/{repo}/issues/{issue\_number} | Update an issue           | Update | Medium     | High       | Completes issue lifecycle                       |
-| 2    | PATCH  | /repos/{owner}/{repo}/pulls/{pull\_number}   | Update a pull request     | Update | Medium     | High       | Completes PR lifecycle                          |
+| 1    | PATCH  | /repos/{owner}/{repo}/issues/{issue/_number} | Update an issue           | Update | Medium     | High       | Completes issue lifecycle                       |
+| 2    | PATCH  | /repos/{owner}/{repo}/pulls/{pull/_number}   | Update a pull request     | Update | Medium     | High       | Completes PR lifecycle                          |
 | 3    | GET    | /repos/{owner}/{repo}/branches               | List branches             | Read   | Low        | Medium     | Common repo operation                           |
 | 4    | GET    | /orgs/{org}/members                          | List organization members | Read   | Medium     | Medium     | Shows org membership and team dynamics          |
 | 5    | POST   | /repos/{owner}/{repo}/comments               | Create commit comment     | Create | Medium     | Medium     | Important for code review workflows             |

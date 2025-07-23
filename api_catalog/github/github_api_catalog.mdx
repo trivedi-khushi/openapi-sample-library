@@ -33,7 +33,7 @@ title: Table for all GitHub APIs
 | Method | Endpoint                                             | Brief Description                        | Type   | Difficulty | Importance |
 | ------ | ---------------------------------------------------- | ---------------------------------------- | ------ | ---------- | ---------- |
 | GET    | /app/installations                                   | List installations for authenticated app | Read   | Medium     | Medium     |
-| POST   | /app/installations/{installation\_id}/access\_tokens | Create access token for installation     | Create | High       | Medium     |
+| POST   | /app/installations/{installation/_id}/access/_tokens | Create access token for installation     | Create | High       | Medium     |
 
 [Docs](https://docs.github.com/en/rest/apps)
 
@@ -45,7 +45,7 @@ title: Table for all GitHub APIs
 | ------ | ------------------------------------------------- | ----------------------------- | ------ | ---------- | ---------- |
 | GET    | /repos/{owner}/{repo}/check-runs                  | List check runs for a Git ref | Read   | High       | Medium     |
 | POST   | /repos/{owner}/{repo}/check-runs                  | Create check run              | Create | High       | Medium     |
-| PATCH  | /repos/{owner}/{repo}/check-runs/{check\_run\_id} | Update check run              | Update | High       | Medium     |
+| PATCH  | /repos/{owner}/{repo}/check-runs/{check/_run/_id} | Update check run              | Update | High       | Medium     |
 
 [Docs](https://docs.github.com/en/rest/checks)
 
@@ -68,8 +68,8 @@ title: Table for all GitHub APIs
 | ------ | ----------------- | --------------------------------- | ------ | ---------- | ---------- |
 | GET    | /gists            | List gists for authenticated user | Read   | Low        | Medium     |
 | POST   | /gists            | Create a gist                     | Create | Medium     | Medium     |
-| PATCH  | /gists/{gist\_id} | Update a gist                     | Update | Medium     | Medium     |
-| DELETE | /gists/{gist\_id} | Delete a gist                     | Delete | Medium     | Medium     |
+| PATCH  | /gists/{gist/_id} | Update a gist                     | Update | Medium     | Medium     |
+| DELETE | /gists/{gist/_id} | Delete a gist                     | Delete | Medium     | Medium     |
 
 [Docs](https://docs.github.com/en/rest/gists)
 
@@ -94,9 +94,9 @@ title: Table for all GitHub APIs
 | ------ | ----------------------------------------------------- | ----------------------- | ------ | ---------- | ---------- |
 | GET    | /repos/{owner}/{repo}/issues                          | List issues             | Read   | Low        | High       |
 | POST   | /repos/{owner}/{repo}/issues                          | Create issue            | Create | Medium     | High       |
-| PATCH  | /repos/{owner}/{repo}/issues/{issue\_number}          | Update issue            | Update | Medium     | High       |
-| GET    | /repos/{owner}/{repo}/issues/{issue\_number}/comments | List comments on issue  | Read   | Low        | High       |
-| POST   | /repos/{owner}/{repo}/issues/{issue\_number}/comments | Create comment on issue | Create | Medium     | High       |
+| PATCH  | /repos/{owner}/{repo}/issues/{issue/_number}          | Update issue            | Update | Medium     | High       |
+| GET    | /repos/{owner}/{repo}/issues/{issue/_number}/comments | List comments on issue  | Read   | Low        | High       |
+| POST   | /repos/{owner}/{repo}/issues/{issue/_number}/comments | Create comment on issue | Create | Medium     | High       |
 
 [Docs](https://docs.github.com/en/rest/issues)
 
@@ -141,8 +141,8 @@ title: Table for all GitHub APIs
 | ------ | ------------------------------------------------ | ------------------- | ------ | ---------- | ---------- |
 | GET    | /repos/{owner}/{repo}/pulls                      | List pull requests  | Read   | Low        | High       |
 | POST   | /repos/{owner}/{repo}/pulls                      | Create pull request | Create | Medium     | High       |
-| PATCH  | /repos/{owner}/{repo}/pulls/{pull\_number}       | Update pull request | Update | Medium     | High       |
-| PUT    | /repos/{owner}/{repo}/pulls/{pull\_number}/merge | Merge pull request  | Update | Medium     | High       |
+| PATCH  | /repos/{owner}/{repo}/pulls/{pull/_number}       | Update pull request | Update | Medium     | High       |
+| PUT    | /repos/{owner}/{repo}/pulls/{pull/_number}/merge | Merge pull request  | Update | Medium     | High       |
 
 [Docs](https://docs.github.com/en/rest/pulls)
 
@@ -152,8 +152,8 @@ title: Table for all GitHub APIs
 
 | Method | Endpoint                                               | Brief Description        | Type   | Difficulty | Importance |
 | ------ | ------------------------------------------------------ | ------------------------ | ------ | ---------- | ---------- |
-| GET    | /repos/{owner}/{repo}/issues/{issue\_number}/reactions | List reactions on issue  | Read   | Low        | Medium     |
-| POST   | /repos/{owner}/{repo}/issues/{issue\_number}/reactions | Create reaction on issue | Create | Medium     | Medium     |
+| GET    | /repos/{owner}/{repo}/issues/{issue/_number}/reactions | List reactions on issue  | Read   | Low        | Medium     |
+| POST   | /repos/{owner}/{repo}/issues/{issue/_number}/reactions | Create reaction on issue | Create | Medium     | Medium     |
 
 [Docs](https://docs.github.com/en/rest/reactions)
 
@@ -201,8 +201,8 @@ title: Table for all GitHub APIs
 | ------ | -------------------------------------- | ------------------------ | ------ | ---------- | ---------- |
 | GET    | /repos/{owner}/{repo}/hooks            | List repository webhooks | Read   | Medium     | Medium     |
 | POST   | /repos/{owner}/{repo}/hooks            | Create webhook           | Create | Medium     | Medium     |
-| PATCH  | /repos/{owner}/{repo}/hooks/{hook\_id} | Update webhook           | Update | Medium     | Medium     |
-| DELETE | /repos/{owner}/{repo}/hooks/{hook\_id} | Delete webhook           | Delete | Medium     | Medium     |
+| PATCH  | /repos/{owner}/{repo}/hooks/{hook/_id} | Update webhook           | Update | Medium     | Medium     |
+| DELETE | /repos/{owner}/{repo}/hooks/{hook/_id} | Delete webhook           | Delete | Medium     | Medium     |
 
 [Docs](https://docs.github.com/en/rest/webhooks)
 

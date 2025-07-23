@@ -1,0 +1,6 @@
+name: issue_number
+in: path
+required: true
+description: The number that identifies the issue.
+schema:
+  type: integer

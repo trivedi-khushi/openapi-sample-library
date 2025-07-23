@@ -9,8 +9,8 @@ description: to be used in this project, and used in case this needs to be expan
 | - | ------ | ------------------------- | ------------------------- | ------ | ---------- | ---------- | --------------------------- |
 | 1 | POST   | /v1/customers             | Create a customer         | Create | Medium     | High       | Core for any billing system |
 | 2 | GET    | /v1/customers/{id}        | Retrieve customer details | Read   | Low        | High       | Common read operation       |
-| 3 | POST   | /v1/payment\_intents      | Create a payment intent   | Create | High       | High       | Payment lifecycle core      |
-| 4 | GET    | /v1/payment\_intents/{id} | Retrieve payment intent   | Read   | Medium     | High       | Payment status checks       |
+| 3 | POST   | /v1/payment/_intents      | Create a payment intent   | Create | High       | High       | Payment lifecycle core      |
+| 4 | GET    | /v1/payment/_intents/{id} | Retrieve payment intent   | Read   | Medium     | High       | Payment status checks       |
 | 5 | POST   | /v1/subscriptions         | Create a subscription     | Create | High       | High       | Recurring billing showcase  |
 | 6 | POST   | /v1/invoices              | Create an invoice         | Create | Medium     | High       | Billing and invoicing       |
 | 7 | POST   | /v1/refunds               | Create a refund           | Create | Medium     | Medium     | Important refund flow       |
@@ -21,14 +21,14 @@ description: to be used in this project, and used in case this needs to be expan
 
 | Rank | Method | Endpoint                      | Brief Description               | Type   | Difficulty | Importance | Reason to Consider Replacement               |
 | ---- | ------ | ----------------------------- | ------------------------------- | ------ | ---------- | ---------- | -------------------------------------------- |
-| 1    | POST   | /v1/payment\_methods          | Create a payment method         | Create | Medium     | Medium     | Useful for diverse payment setups            |
+| 1    | POST   | /v1/payment/_methods          | Create a payment method         | Create | Medium     | Medium     | Useful for diverse payment setups            |
 | 2    | GET    | /v1/subscriptions/{id}        | Retrieve subscription details   | Read   | Medium     | High       | Completes subscription lifecycle             |
 | 3    | POST   | /v1/subscriptions/{id}/cancel | Cancel a subscription           | Update | Medium     | High       | Common subscription management action        |
 | 4    | POST   | /v1/invoices/{id}/pay         | Pay an invoice                  | Update | Medium     | High       | Important invoice lifecycle step             |
 | 5    | GET    | /v1/products                  | List products                   | Read   | Low        | Medium     | For product catalog management               |
 | 6    | POST   | /v1/prices                    | Create price                    | Create | Medium     | Medium     | For pricing management                       |
-| 7    | GET    | /v1/payment\_methods/{id}     | Retrieve payment method details | Read   | Low        | Medium     | Often needed for payment method verification |
-| 8    | POST   | /v1/setup\_intents            | Create a setup intent           | Create | High       | Medium     | For saved payment methods                    |
+| 7    | GET    | /v1/payment/_methods/{id}     | Retrieve payment method details | Read   | Low        | Medium     | Often needed for payment method verification |
+| 8    | POST   | /v1/setup/_intents            | Create a setup intent           | Create | High       | Medium     | For saved payment methods                    |
 | 9    | GET    | /v1/balance                   | Retrieve current balance        | Read   | Low        | Low        | Useful for account financial overview        |
 | 10   | GET    | /v1/charges                   | List charges                    | Read   | Medium     | Medium     | Legacy payment flow support                  |
 

@@ -1,42 +1,65 @@
-/repos/{owner}/{repo}/issues/{issue_number}:
-  patch:
-    summary: Update an issue
-    description: Update an existing GitHub issue. Only users with push access can modify issues.
-    operationId: updateIssue
-    tags:
-      - Issues
-    parameters:
-      - $ref: '../../components/github/parameters/owner.yaml'
-      - $ref: '../../components/github/parameters/repo.yaml'
-      - $ref: '../../components/github/parameters/index.yaml'
-    requestBody:
-      required: true
+patch:
+  summary: Update an issue
+  description: >
+    Edit an existing issue in a repository. Issue owners and users with push
+    access (or with the **Triage** role) can update an issue. Only provided
+    fields will be modified; others will remain unchanged.
+  operationId: updateIssue
+  tags:
+    - GitHubIssue
+  parameters:
+    - $ref: ../../components/github/parameters/owner.yaml
+    - $ref: ../../components/github/parameters/repo.yaml
+    - $ref: ../../components/github/parameters/issue_number.yaml
+  requestBody:
+    description: Issue information to update.
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../../components/github/schemas/issue-update-request.yaml
+        examples:
+          updateIssueRequest:
+            $ref: ../../examples/github/update-issue-request.yaml
+  responses:
+    "200":
+      description: Issue successfully updated.
       content:
         application/json:
           schema:
-            $ref: '../../components/github/schemas/issue-update-request.yaml'
+            $ref: ../../components/github/schemas/issue-response.yaml
           examples:
-            update-issue:
-              $ref: '../../examples/github/update-issue-request.yaml'
-    responses:
-      '200':
-        description: Successful issue update
-        content:
-          application/json:
-            schema:
-              $ref: '../../components/github/schemas/index.yaml'
-            examples:
-              success-response:
-                $ref: '../../examples/github/example_github.yaml'
-      '404':
-        description: Issue not found
-        content:
-          application/json:
-            schema:
-              $ref: '../../components/github/schemas/error.yaml'
-      '422':
-        description: Validation failed
-        content:
-          application/json:
-            schema:
-              $ref: '../../components/github/schemas/error.yaml'
+            updateIssueResponse:
+              $ref: ../../examples/github/update-issue-success.yaml
+    "403":
+      description: Forbidden – the user does not have permission to edit the issue.
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/github/schemas/error.yaml
+    "404":
+      description: Not Found – the issue or repository could not be found.
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/github/schemas/error.yaml
+          examples:
+            errorExample:
+              value:
+                message: Not Found
+                documentation_url: https://docs.github.com/rest
+    "422":
+      description: Validation Failed – the input fields are invalid.
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/github/schemas/error.yaml
+          examples:
+            validationErrorExample:
+              value:
+                message: Validation Failed
+                errors:
+                  - resource: Issue
+                    field: title
+                    code: missing_field
+                documentation_url: https://docs.github.com/rest

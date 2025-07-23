@@ -1,0 +1,6 @@
+name: repo
+in: path
+required: true
+description: "The name of the repository without the `.git` extension. The name is not case sensitive."
+schema:
+  type: string
