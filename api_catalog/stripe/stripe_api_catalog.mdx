@@ -1,0 +1,136 @@
+---
+title: Table for all Stripe APIs
+---
+
+# Stripe REST API Endpoint Catalog (2025) — Organized by Resource
+
+Docs base: [https://stripe.com/docs/api](https://stripe.com/docs/api)
+
+---
+
+## 1. Customers
+
+| Method | Endpoint           | Brief Description         | Type   | Difficulty | Importance |
+| ------ | ------------------ | ------------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/customers      | Create a new customer     | Create | Medium     | High       |
+| GET    | /v1/customers/{id} | Retrieve customer details | Read   | Low        | High       |
+| POST   | /v1/customers/{id} | Update customer           | Update | Medium     | High       |
+| DELETE | /v1/customers/{id} | Delete customer           | Delete | Medium     | Medium     |
+| GET    | /v1/customers      | List all customers        | Read   | Medium     | High       |
+
+[Docs](https://stripe.com/docs/api/customers)
+
+---
+
+## 2. Charges (Legacy payment API)
+
+| Method | Endpoint         | Brief Description       | Type   | Difficulty | Importance |
+| ------ | ---------------- | ----------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/charges      | Create a charge         | Create | High       | High       |
+| GET    | /v1/charges/{id} | Retrieve charge details | Read   | Medium     | High       |
+| POST   | /v1/charges/{id} | Update charge           | Update | High       | Medium     |
+| GET    | /v1/charges      | List charges            | Read   | Medium     | High       |
+
+[Docs](https://stripe.com/docs/api/charges)
+
+---
+
+## 3. PaymentIntents (Recommended payment flow)
+
+| Method | Endpoint                  | Brief Description               | Type   | Difficulty | Importance |
+| ------ | ------------------------- | ------------------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/payment/_intents      | Create a payment intent         | Create | High       | High       |
+| GET    | /v1/payment/_intents/{id} | Retrieve payment intent details | Read   | Medium     | High       |
+| POST   | /v1/payment/_intents/{id} | Update payment intent           | Update | High       | Medium     |
+| GET    | /v1/payment/_intents      | List payment intents            | Read   | Medium     | High       |
+
+[Docs](https://stripe.com/docs/api/payment_intents)
+
+---
+
+## 4. PaymentMethods
+
+| Method | Endpoint                  | Brief Description               | Type   | Difficulty | Importance |
+| ------ | ------------------------- | ------------------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/payment/_methods      | Create payment method           | Create | Medium     | Medium     |
+| GET    | /v1/payment/_methods/{id} | Retrieve payment method details | Read   | Low        | Medium     |
+| GET    | /v1/payment/_methods      | List payment methods            | Read   | Low        | Medium     |
+
+[Docs](https://stripe.com/docs/api/payment_methods)
+
+---
+
+## 5. Subscriptions
+
+| Method | Endpoint                      | Brief Description     | Type   | Difficulty | Importance |
+| ------ | ----------------------------- | --------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/subscriptions             | Create subscription   | Create | High       | High       |
+| GET    | /v1/subscriptions/{id}        | Retrieve subscription | Read   | Medium     | High       |
+| POST   | /v1/subscriptions/{id}        | Update subscription   | Update | High       | Medium     |
+| POST   | /v1/subscriptions/{id}/cancel | Cancel subscription   | Update | Medium     | High       |
+| GET    | /v1/subscriptions             | List subscriptions    | Read   | Medium     | High       |
+
+[Docs](https://stripe.com/docs/api/subscriptions)
+
+---
+
+## 6. Invoices
+
+| Method | Endpoint              | Brief Description        | Type   | Difficulty | Importance |
+| ------ | --------------------- | ------------------------ | ------ | ---------- | ---------- |
+| POST   | /v1/invoices          | Create invoice           | Create | Medium     | High       |
+| GET    | /v1/invoices/{id}     | Retrieve invoice details | Read   | Low        | High       |
+| POST   | /v1/invoices/{id}     | Update invoice           | Update | Medium     | Medium     |
+| POST   | /v1/invoices/{id}/pay | Pay an invoice           | Update | Medium     | High       |
+| GET    | /v1/invoices          | List invoices            | Read   | Medium     | High       |
+
+[Docs](https://stripe.com/docs/api/invoices)
+
+---
+
+## 7. Products
+
+| Method | Endpoint          | Brief Description        | Type   | Difficulty | Importance |
+| ------ | ----------------- | ------------------------ | ------ | ---------- | ---------- |
+| POST   | /v1/products      | Create a product         | Create | Medium     | Medium     |
+| GET    | /v1/products/{id} | Retrieve product details | Read   | Low        | Medium     |
+| POST   | /v1/products/{id} | Update product           | Update | Medium     | Medium     |
+| GET    | /v1/products      | List products            | Read   | Medium     | Medium     |
+
+[Docs](https://stripe.com/docs/api/products)
+
+---
+
+## 8. Prices
+
+| Method | Endpoint        | Brief Description      | Type   | Difficulty | Importance |
+| ------ | --------------- | ---------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/prices      | Create a price         | Create | Medium     | Medium     |
+| GET    | /v1/prices/{id} | Retrieve price details | Read   | Low        | Medium     |
+| GET    | /v1/prices      | List prices            | Read   | Medium     | Medium     |
+
+[Docs](https://stripe.com/docs/api/prices)
+
+---
+
+## 9. Refunds
+
+| Method | Endpoint         | Brief Description       | Type   | Difficulty | Importance |
+| ------ | ---------------- | ----------------------- | ------ | ---------- | ---------- |
+| POST   | /v1/refunds      | Create a refund         | Create | Medium     | Medium     |
+| GET    | /v1/refunds/{id} | Retrieve refund details | Read   | Low        | Medium     |
+| GET    | /v1/refunds      | List refunds            | Read   | Medium     | Medium     |
+
+[Docs](https://stripe.com/docs/api/refunds)
+
+---
+
+## 10. Balance
+
+| Method | Endpoint    | Brief Description        | Type | Difficulty | Importance |
+| ------ | ----------- | ------------------------ | ---- | ---------- | ---------- |
+| GET    | /v1/balance | Retrieve current balance | Read | Low        | Low        |
+
+[Docs](https://stripe.com/docs/api/balance)
+
+---

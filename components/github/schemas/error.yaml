@@ -1,0 +1,17 @@
+type: object
+properties:
+  message:
+    type: string
+    description: Error message describing the cause of the error.
+  documentation_url:
+    type: string
+    format: uri
+    description: URL for documentation about this error.
+  errors:
+    type: array
+    description: Details of specific errors that caused the failure, if applicable.
+    items:
+      type: object
+      properties:
+        resource:
+          type: string

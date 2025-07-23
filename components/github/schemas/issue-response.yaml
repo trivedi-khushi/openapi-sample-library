@@ -1,0 +1,44 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 42
+  number:
+    type: integer
+    example: 1347
+  title:
+    type: string
+    example: "Found a bug"
+  body:
+    type: string
+    example: "I'm having a problem with this."
+  state:
+    type: string
+    enum: [open, closed]
+    example: "open"
+  assignees:
+    type: array
+    items:
+      type: object
+      properties:
+        login:
+          type: string
+          example: "octocat"
+        id:
+          type: integer
+          example: 1
+  created_at:
+    type: string
+    format: date-time
+    example: "2021-01-01T00:00:00Z"
+  updated_at:
+    type: string
+    format: date-time
+    example: "2021-01-02T12:34:56Z"
+required:
+  - id
+  - number
+  - title
+  - state
+  - created_at
+  - updated_at

@@ -1,0 +1,6 @@
+name: owner
+in: path
+required: true
+description: The account owner of the repository. The name is not case sensitive.
+schema:
+  type: string

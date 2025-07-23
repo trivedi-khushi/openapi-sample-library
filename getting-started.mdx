@@ -1,0 +1,107 @@
+---
+title: Getting Started with the OpenAPI Sample Library Project.
+description: Using & contributing to this Project - setup guide, & running locally.
+---
+ 
+## 🐳 How to get started with Docker on this Project locally (Optional)
+
+  1. Ensure Docker Desktop is installed and running.
+
+  2. Navigate to the repo root and run:
+
+      ~~~
+      cd docker
+      docker build -t my-openapi-viewer .
+      docker run --rm -p 8080:80 -v ../openapi.yaml:/usr/share/nginx/html/openapi.yaml my-openapi-viewer
+      ~~~
+
+  3. Visit http://localhost:8080 to preview documentation via Redoc or Swagger UI.
+
+  4. All spec files are in the repo. No hidden dependencies or external fetches are needed to run this project locally in your systems irrespective of the OS.
+
+## 💻 Previewing OpenAPI Sample Library in your Local systems
+
+    There are typically 3 ways to preview the project locally:
+
+    ### 🔹Option-1 : Using Docker (Recommended)
+
+    After setting up Docker, you can run a containerized Redoc server:
+
+    ```
+    docker run --rm -p 8080:80 \
+      -v ${PWD}/openapi.yaml:/usr/share/nginx/html/openapi.yaml \
+      redocly/redoc
+    ```
+
+    🎉 Hurray!! You've set-up your local server, & it's ready for preview.
+
+    ✅ Open your browser and visit: http://localhost:8080 for preview. 
+
+    🗒️This method ensures no local dependencies and is the widely accepted among developer communities for major projects.
+
+---
+
+### 🔹Option-2 : Using Swagger Editor (Browser-Based)
+
+    You can drag-and-drop/upload your `openapi.yaml` file into the online [Swagger Editor](https://editor.swagger.io/)
+
+    👉 You can validate & preview the spec interactively with syntax feedback.
+
+    🗒️ This methods requires you to go and check each .yaml file with APIs and view them manually each time.
+
+---
+
+### 🔹Option-3: Using Redocly CLI
+
+    If you prefer working with a CLI and want to bundle your OpenAPI files:
+
+    1. Install Redocly CLI:
+
+    ```
+    npm install -g @redocly/cli
+    ```
+
+    2. Run the bundler:
+
+    ```
+    redocly bundle openapi.yaml -o bundled.yaml
+    ```
+
+    3. Now, open `bundled.yaml` with Swagger or Redoc viewer.
+
+---
+
+## Validation Commands Used
+
+1.
+
+```
+npm install -g @redocly/cli    
+```
+
+2. 
+
+```
+redocly bundle "path/to/openapi.yaml" -o bundled.yaml
+```
+
+3.
+
+```
+redocly bundle openapi.yaml -o bundled.yaml
+```
+
+4.
+
+```
+redocly lint openapi.yaml
+```
+![Sample image to view the expected command output](images\Screenshot for running redocly lint command.png)
+
+5.
+
+```
+docker run --rm -p 8080:8080 -v ${PWD}:/usr/share/nginx/html:ro swaggerapi/swagger-ui
+```
+
+---

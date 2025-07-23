@@ -1,0 +1,9 @@
+summary: Example request to update an issue
+value:
+  title: Found a bug
+  body: "I'm having a problem with this."
+  assignees:
+    - octocat
+  state: open
+  labels:
+    - bug

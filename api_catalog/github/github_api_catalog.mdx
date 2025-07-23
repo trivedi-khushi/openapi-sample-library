@@ -1,0 +1,209 @@
+---
+title: Table for all GitHub APIs
+---
+**Comprehensive, detailed catalog** of all **GitHub REST API v3 endpoints** grouped by category, with:
+
+* **Endpoint URL and HTTP method**
+* **Brief description**
+* **API type** (GET=Read, POST=Create, PATCH=Update, DELETE=Delete)
+* **Estimated difficulty for your OpenAPI Sample Library project** (Low / Medium / High)
+* **Importance based on common use cases & popularity**
+
+---
+
+# GitHub REST API Endpoints Catalog (with Details)
+
+---
+
+### 1. Activity
+
+| Method | Endpoint                     | Brief Description                      | Type   | Difficulty | Importance |
+| ------ | ---------------------------- | -------------------------------------- | ------ | ---------- | ---------- |
+| GET    | /users/{username}/events     | List public events performed by a user | Read   | Low        | Medium     |
+| GET    | /repos/{owner}/{repo}/events | List events for a repo                 | Read   | Low        | Medium     |
+| GET    | /notifications               | List user notifications                | Read   | Medium     | High       |
+| PATCH  | /notifications               | Mark notifications as read             | Update | Medium     | High       |
+
+[Docs](https://docs.github.com/en/rest/activity/events)
+
+---
+
+### 2. Apps
+
+| Method | Endpoint                                             | Brief Description                        | Type   | Difficulty | Importance |
+| ------ | ---------------------------------------------------- | ---------------------------------------- | ------ | ---------- | ---------- |
+| GET    | /app/installations                                   | List installations for authenticated app | Read   | Medium     | Medium     |
+| POST   | /app/installations/{installation/_id}/access/_tokens | Create access token for installation     | Create | High       | Medium     |
+
+[Docs](https://docs.github.com/en/rest/apps)
+
+---
+
+### 3. Checks
+
+| Method | Endpoint                                          | Brief Description             | Type   | Difficulty | Importance |
+| ------ | ------------------------------------------------- | ----------------------------- | ------ | ---------- | ---------- |
+| GET    | /repos/{owner}/{repo}/check-runs                  | List check runs for a Git ref | Read   | High       | Medium     |
+| POST   | /repos/{owner}/{repo}/check-runs                  | Create check run              | Create | High       | Medium     |
+| PATCH  | /repos/{owner}/{repo}/check-runs/{check/_run/_id} | Update check run              | Update | High       | Medium     |
+
+[Docs](https://docs.github.com/en/rest/checks)
+
+---
+
+### 4. Codespaces
+
+| Method | Endpoint         | Brief Description                    | Type   | Difficulty | Importance |
+| ------ | ---------------- | ------------------------------------ | ------ | ---------- | ---------- |
+| GET    | /user/codespaces | List authenticated user's codespaces | Read   | Medium     | Low        |
+| POST   | /user/codespaces | Create a codespace                   | Create | High       | Low        |
+
+[Docs](https://docs.github.com/en/rest/codespaces)
+
+---
+
+### 5. Gists
+
+| Method | Endpoint          | Brief Description                 | Type   | Difficulty | Importance |
+| ------ | ----------------- | --------------------------------- | ------ | ---------- | ---------- |
+| GET    | /gists            | List gists for authenticated user | Read   | Low        | Medium     |
+| POST   | /gists            | Create a gist                     | Create | Medium     | Medium     |
+| PATCH  | /gists/{gist/_id} | Update a gist                     | Update | Medium     | Medium     |
+| DELETE | /gists/{gist/_id} | Delete a gist                     | Delete | Medium     | Medium     |
+
+[Docs](https://docs.github.com/en/rest/gists)
+
+---
+
+### 6. Git (Git Database)
+
+| Method | Endpoint                          | Brief Description | Type   | Difficulty | Importance |
+| ------ | --------------------------------- | ----------------- | ------ | ---------- | ---------- |
+| POST   | /repos/{owner}/{repo}/git/blobs   | Create a Git blob | Create | Medium     | Medium     |
+| GET    | /repos/{owner}/{repo}/git/commits | List commits      | Read   | Medium     | High       |
+| GET    | /repos/{owner}/{repo}/git/refs    | List refs         | Read   | Medium     | Medium     |
+| POST   | /repos/{owner}/{repo}/git/refs    | Create ref        | Create | High       | Medium     |
+
+[Docs](https://docs.github.com/en/rest/git)
+
+---
+
+### 7. Issues
+
+| Method | Endpoint                                              | Brief Description       | Type   | Difficulty | Importance |
+| ------ | ----------------------------------------------------- | ----------------------- | ------ | ---------- | ---------- |
+| GET    | /repos/{owner}/{repo}/issues                          | List issues             | Read   | Low        | High       |
+| POST   | /repos/{owner}/{repo}/issues                          | Create issue            | Create | Medium     | High       |
+| PATCH  | /repos/{owner}/{repo}/issues/{issue/_number}          | Update issue            | Update | Medium     | High       |
+| GET    | /repos/{owner}/{repo}/issues/{issue/_number}/comments | List comments on issue  | Read   | Low        | High       |
+| POST   | /repos/{owner}/{repo}/issues/{issue/_number}/comments | Create comment on issue | Create | Medium     | High       |
+
+[Docs](https://docs.github.com/en/rest/issues)
+
+---
+
+### 8. Licenses
+
+| Method | Endpoint            | Brief Description    | Type | Difficulty | Importance |
+| ------ | ------------------- | -------------------- | ---- | ---------- | ---------- |
+| GET    | /licenses           | List common licenses | Read | Low        | Low        |
+| GET    | /licenses/{license} | Get license by key   | Read | Low        | Low        |
+
+[Docs](https://docs.github.com/en/rest/licenses)
+
+---
+
+### 9. Markdown
+
+| Method | Endpoint  | Brief Description       | Type   | Difficulty | Importance |
+| ------ | --------- | ----------------------- | ------ | ---------- | ---------- |
+| POST   | /markdown | Render Markdown to HTML | Create | Low        | Medium     |
+
+[Docs](https://docs.github.com/en/rest/markdown)
+
+---
+
+### 10. Organizations
+
+| Method | Endpoint                           | Brief Description     | Type   | Difficulty | Importance |
+| ------ | ---------------------------------- | --------------------- | ------ | ---------- | ---------- |
+| GET    | /orgs/{org}                        | Get organization info | Read   | Low        | High       |
+| GET    | /orgs/{org}/members                | List members of org   | Read   | Medium     | Medium     |
+| PUT    | /orgs/{org}/memberships/{username} | Add/update membership | Update | Medium     | Medium     |
+
+[Docs](https://docs.github.com/en/rest/orgs)
+
+---
+
+### 11. Pull Requests
+
+| Method | Endpoint                                         | Brief Description   | Type   | Difficulty | Importance |
+| ------ | ------------------------------------------------ | ------------------- | ------ | ---------- | ---------- |
+| GET    | /repos/{owner}/{repo}/pulls                      | List pull requests  | Read   | Low        | High       |
+| POST   | /repos/{owner}/{repo}/pulls                      | Create pull request | Create | Medium     | High       |
+| PATCH  | /repos/{owner}/{repo}/pulls/{pull/_number}       | Update pull request | Update | Medium     | High       |
+| PUT    | /repos/{owner}/{repo}/pulls/{pull/_number}/merge | Merge pull request  | Update | Medium     | High       |
+
+[Docs](https://docs.github.com/en/rest/pulls)
+
+---
+
+### 12. Reactions
+
+| Method | Endpoint                                               | Brief Description        | Type   | Difficulty | Importance |
+| ------ | ------------------------------------------------------ | ------------------------ | ------ | ---------- | ---------- |
+| GET    | /repos/{owner}/{repo}/issues/{issue/_number}/reactions | List reactions on issue  | Read   | Low        | Medium     |
+| POST   | /repos/{owner}/{repo}/issues/{issue/_number}/reactions | Create reaction on issue | Create | Medium     | Medium     |
+
+[Docs](https://docs.github.com/en/rest/reactions)
+
+---
+
+### 13. Repositories
+
+| Method | Endpoint              | Brief Description   | Type   | Difficulty | Importance |
+| ------ | --------------------- | ------------------- | ------ | ---------- | ---------- |
+| GET    | /repos/{owner}/{repo} | Get repository info | Read   | Low        | High       |
+| POST   | /user/repos           | Create repository   | Create | Medium     | High       |
+| PATCH  | /repos/{owner}/{repo} | Update repository   | Update | Medium     | High       |
+| DELETE | /repos/{owner}/{repo} | Delete repository   | Delete | Medium     | High       |
+
+[Docs](https://docs.github.com/en/rest/repos)
+
+---
+
+### 14. Teams
+
+| Method | Endpoint          | Brief Description          | Type   | Difficulty | Importance |
+| ------ | ----------------- | -------------------------- | ------ | ---------- | ---------- |
+| GET    | /orgs/{org}/teams | List teams in organization | Read   | Medium     | Medium     |
+| POST   | /orgs/{org}/teams | Create team                | Create | Medium     | Medium     |
+
+[Docs](https://docs.github.com/en/rest/teams)
+
+---
+
+### 15. Users
+
+| Method | Endpoint          | Brief Description                    | Type   | Difficulty | Importance |
+| ------ | ----------------- | ------------------------------------ | ------ | ---------- | ---------- |
+| GET    | /users/{username} | Get user info                        | Read   | Low        | High       |
+| PATCH  | /user             | Update authenticated user info       | Update | Medium     | Medium     |
+| GET    | /user/followers   | List followers of authenticated user | Read   | Low        | Medium     |
+
+[Docs](https://docs.github.com/en/rest/users)
+
+---
+
+### 16. Webhooks
+
+| Method | Endpoint                               | Brief Description        | Type   | Difficulty | Importance |
+| ------ | -------------------------------------- | ------------------------ | ------ | ---------- | ---------- |
+| GET    | /repos/{owner}/{repo}/hooks            | List repository webhooks | Read   | Medium     | Medium     |
+| POST   | /repos/{owner}/{repo}/hooks            | Create webhook           | Create | Medium     | Medium     |
+| PATCH  | /repos/{owner}/{repo}/hooks/{hook/_id} | Update webhook           | Update | Medium     | Medium     |
+| DELETE | /repos/{owner}/{repo}/hooks/{hook/_id} | Delete webhook           | Delete | Medium     | Medium     |
+
+[Docs](https://docs.github.com/en/rest/webhooks)
+
+---

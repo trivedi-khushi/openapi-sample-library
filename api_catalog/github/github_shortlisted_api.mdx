@@ -1,0 +1,35 @@
+---
+title: Ranked list of GitHub APIs 
+description: to be used in this project, and used in case this needs to be expanded more in future scopes.
+---
+
+# 🌟 Primary Curated GitHub API Endpoint Set (7 endpoints)
+
+| # | Method | Endpoint                     | Brief Description                | Type   | Difficulty | Importance | Why Pick?                              |
+| - | ------ | ---------------------------- | -------------------------------- | ------ | ---------- | ---------- | -------------------------------------- |
+| 1 | GET    | /users/{username}            | Get public info of a GitHub user | Read   | Low        | High       | Common, simple, widely used            |
+| 2 | GET    | /repos/{owner}/{repo}        | Get detailed repository info     | Read   | Low        | High       | Core API; essential resource           |
+| 3 | POST   | /user/repos                  | Create a new repository          | Create | Medium     | High       | Shows write ops and request body usage |
+| 4 | GET    | /repos/{owner}/{repo}/issues | List issues for a repository     | Read   | Low        | High       | Common dev workflow                    |
+| 5 | POST   | /repos/{owner}/{repo}/issues | Create an issue                  | Create | Medium     | High       | Shows complex request body             |
+| 6 | GET    | /repos/{owner}/{repo}/pulls  | List pull requests               | Read   | Low        | High       | Widely used, important flow            |
+| 7 | POST   | /repos/{owner}/{repo}/pulls  | Create a pull request            | Create | Medium     | High       | Demonstrates complex flow              |
+
+---
+
+# 🔄 Secondary / Replacement Candidate Endpoints (Ranked by relevance for replacement)
+
+| Rank | Method | Endpoint                                     | Brief Description         | Type   | Difficulty | Importance | Reason to Consider Replacement                  |
+| ---- | ------ | -------------------------------------------- | ------------------------- | ------ | ---------- | ---------- | ----------------------------------------------- |
+| 1    | PATCH  | /repos/{owner}/{repo}/issues/{issue/_number} | Update an issue           | Update | Medium     | High       | Completes issue lifecycle                       |
+| 2    | PATCH  | /repos/{owner}/{repo}/pulls/{pull/_number}   | Update a pull request     | Update | Medium     | High       | Completes PR lifecycle                          |
+| 3    | GET    | /repos/{owner}/{repo}/branches               | List branches             | Read   | Low        | Medium     | Common repo operation                           |
+| 4    | GET    | /orgs/{org}/members                          | List organization members | Read   | Medium     | Medium     | Shows org membership and team dynamics          |
+| 5    | POST   | /repos/{owner}/{repo}/comments               | Create commit comment     | Create | Medium     | Medium     | Important for code review workflows             |
+| 6    | GET    | /repos/{owner}/{repo}/commits                | List commits              | Read   | Medium     | Medium     | Useful for audit and history                    |
+| 7    | POST   | /repos/{owner}/{repo}/git/refs               | Create a Git ref          | Create | High       | Medium     | More advanced Git database operation            |
+| 8    | DELETE | /repos/{owner}/{repo}                        | Delete a repository       | Delete | Medium     | Medium     | Important destructive operation (use carefully) |
+| 9    | GET    | /users/{username}/followers                  | List followers of a user  | Read   | Low        | Medium     | Social aspects of GitHub user                   |
+| 10   | POST   | /repos/{owner}/{repo}/releases               | Create a release          | Create | Medium     | Medium     | Popular for release management                  |
+
+---

@@ -1,0 +1,47 @@
+openapi: "3.0.3"
+info:
+  title: OpenAPI Sample Library
+  version: "1.0.0"
+  description: >
+    Documentation for multiple APIs (GitHub, Jira, Notion, Slack, Stripe).
+    This specification is split into multiple files for maintainability.
+  license:
+      name: MIT
+      url: https://opensource.org/licenses/MIT
+servers:
+  - url: https://api.github.com
+    description: GitHub API Server
+  - url: https://api.atlassian.com
+    description: Jira API server
+  - url: https://api.notion.com
+    description: Notion API server
+  - url: https://slack.com/api
+    description: Slack API server
+  - url: https://api.stripe.com
+    description: Stripe API server
+
+security:
+  - BearerAuth: []
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    owner:
+      $ref: "components/github/parameters/owner.yaml"
+    repo:
+      $ref: "components/github/parameters/repo.yaml"
+    issue_number:
+      $ref: "components/github/parameters/issue_number.yaml"
+
+  schemas:
+    GitHubUser:
+      $ref: './components/github/schemas/schema_github.yaml'
+
+paths:
+  /repos/{owner}/{repo}/issues/{issue_number}:
+    $ref: "apis/github/github-api.yaml"
