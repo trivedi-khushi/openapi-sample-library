@@ -1,6 +1,6 @@
 # ──────────────────────────────────────────────────────────────
 # 1. Tiny image that already contains Swagger‑UI + Nginx
-FROM swaggerapi/swagger-ui:v5.17.12  # fixed tag keeps builds reproducible
+FROM swaggerapi/swagger-ui:v5.17.12
 
 # 2. Bring the OpenAPI spec into the web root that Swagger‑UI serves
 COPY openapi.yaml /usr/share/nginx/html/openapi.yaml
