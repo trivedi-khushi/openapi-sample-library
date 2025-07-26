@@ -4,7 +4,7 @@ Curated library of 20+ real-world API examples with request/response schemas and
 ## 📎 How to Contribute?
 Read the Contribution Guide [here](https://khushitrivedi.hashnode.dev/openapi-sample-library-project#heading-contribution-guidelines)
 
-## Key Project Insights (KPIs of this Project)
+## 🪙 Key Project Insights (KPIs of this Project)
 1. Use of `$ref` to refere & split all the API spec instead of  listing them all in one .yaml file. Gives reusability, efficiant maintanace.
 
 2. Containerized environment using Docker to serve the API documentation locally via Redoc and Swagger UI.
