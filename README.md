@@ -1,5 +1,3 @@
-OpenAPI Sample Library
----
 ## ℹ️  About the Project - 
 Curated library of 20+ real-world API examples with request/response schemas and CI automation for docs generation. [Read about the project workflow & design decisions!](https://khushitrivedi.hashnode.dev/openapi-sample-library-project)
 
